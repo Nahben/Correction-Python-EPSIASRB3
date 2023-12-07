@@ -3,6 +3,7 @@
 
 => Partie 1
 """
+import random
 
 for i in range (10):
   print("J'aime programmer avec Python !")
@@ -43,7 +44,8 @@ while nbr != 10 :
 
 """**Exercice 3 (clé) :**"""
 
-nbr = 10
+from random import *
+nbr = random.randint(100)
 
 nbr_input = int(input("Essayer de deviner le nombre :"))
 
@@ -122,7 +124,7 @@ for num_ligne in range (1, nbre_ligne + 1):
     nbre_char_sapin = 2 * num_ligne - 1
 
   # Affichage d'une ligne de sapin
-  print( space * padSize, char_sapin * nbre_char_sapin)
+  print( space * (padSize/2), char_sapin * nbre_char_sapin, space * (padSize/2))
   # Décrémenter le nombre de caractères de remplissage
   padSize -= 1
 
@@ -134,7 +136,7 @@ largeur = hauteur
 lv = 3
 taille = 0
 
-print('.' + ' '*(2*(n-1)) + '*')
+print('.' + ' ' * (hauteur/2) + '*')
 
 for i in range(largeur-1,-1,-1):
     if taille < n-1:
